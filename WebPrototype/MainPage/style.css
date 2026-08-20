@@ -1,0 +1,354 @@
+* {
+    box-sizing: border-box;
+    padding: 0%;
+}
+
+body {
+    margin: 0px;
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url("mainbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.navigation {
+    box-shadow: 3px 3px 5px;
+    background-color: rgba(201, 117, 176, 0.548);
+    border-radius: 3px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a {
+    padding: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(60, 59, 59);
+}
+
+nav a:hover{
+    background-color: rgba(243, 168, 227, 0.385);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
+
+.sidebar a:hover{
+    background-color: rgba(214, 30, 61, 0.44);
+    backdrop-filter: blur(10px);
+    border-radius: 6px;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+#home{
+    color: black;
+}
+
+.sidebar{
+    box-shadow: 3px 3px 5px;    
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 285px;
+    width: 250px;
+    z-index: 2;
+    background-color:rgba(255, 192, 203, 0.362);
+    border-radius: 15px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    backdrop-filter: blur(10px);
+    margin-top: 0%;
+}
+
+.sidebar li{
+    width: 100%;
+    margin: 15px 0;
+}
+
+.sidebar a{
+    width: 100%;
+    padding: 5px;
+    color: black;
+    font-size: 18px;
+}
+
+header {
+    background-color: rgba(236, 123, 67, 0.669);
+    backdrop-filter: blur(5px);    
+    text-align: center;
+    padding: 1%;
+}
+
+footer {
+    background-color: rgba(236, 123, 67, 0.669);
+    backdrop-filter: blur(5px); 
+    text-align: center;
+    padding: 1%;
+}
+
+#close{
+    align-self: flex-start;
+    width: auto;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.243);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+}
+
+#close a{
+    display: inline-flex;
+    padding: 4px;
+}
+
+.mobileMenu{
+    display: none;
+}
+
+@media(max-width: 800px) {
+    .hideMobileScreen{
+        display: none;
+    }
+
+    .mobileMenu{
+        display: block;
+    }
+}
+
+#home{
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;    
+  font-style: bold;
+}
+
+#p1{
+
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;    
+  font-size: 25px;
+}
+
+.container{
+    width: 100%;
+    box-shadow: 10px 25px 28px rgb(231, 93, 167);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.slides{
+    display: flex;
+    width: 100%;
+    animation: slide_animation 30s infinite;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+@keyframes slide_animation {
+    0%{
+        transform: translateX(0%);
+    }
+
+    25%{
+        transform: translateX(-100%);
+    }
+    
+    50%{
+        transform: translateX(-200%);
+    }
+    
+    75%{
+        transform: translateX(-100%);
+    }    
+
+    100%{
+        transform: translateX(0%);
+    }    
+}
+
+
+.g-container{
+    padding-top: 20px;
+    padding-left: 45px;
+    display: grid;
+    grid-template-columns: 420px 420px 420px;
+    grid-template-rows: 150px 150px 150px;
+    gap: 3px;
+    grid-template-areas: 
+    "grid1 grid2 grid2"
+    "grid1 grid2 grid2"
+    "grid1 grid2 grid2";
+}
+
+.grid{
+    padding: 2em;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid:hover{
+    transform: translateY(-10px);       
+}
+
+#g1{
+    background-color: rgba(184, 122, 154, 0.61);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 10px 25px 28px rgb(141, 134, 138);
+}
+
+#g1:hover{
+    box-shadow: 0px 12px 5px rgba(150, 100, 123, 0.782); 
+}
+
+#g2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+}
+
+
+.grid-heading{
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;    
+  font-size: 35px;   
+  background: linear-gradient(
+    to right,
+    rgb(168, 23, 105),
+    rgb(236, 36, 150),
+    rgb(224, 13, 133),
+    rgb(117, 50, 88),
+    rgb(168, 23, 105)
+  );
+
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  animation:gradientAnimation 3s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0%{
+        background-position: 200% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.grid-paragraph{
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;    
+  font-size: 20px;
+  font-style: italic;     
+}
+
+@media(max-width: 800px) {
+    .container{
+        position: absolute;
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%, -80%);
+        border: 1px solid;
+        width: 400px;
+        box-shadow: 10px 25px 28px deeppink;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .slides{
+        display: flex;
+        width: 100%;
+        animation: slide_animation 30s infinite;
+    }
+
+    img{
+        width: 100%;
+    }
+
+.g-container{
+    padding-top: 20px;
+    padding-left: 45px;
+    display: grid;
+    grid-template-columns: 220px 220px;
+    grid-template-rows: 150px 150px 150px 150px 150px 150px ;
+    gap: 3px;
+    grid-template-areas: 
+    "grid1 grid1"
+    "grid1 grid1"
+    "grid1 grid1"
+    "grid2 grid2"
+    "grid2 grid2"
+    "grid2 grid2";
+}
+
+.grid{
+    padding: 2em;
+    text-align: center;
+}
+
+#g1{
+    background-color: rgba(184, 122, 154, 0.61);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 10px 25px 28px rgb(141, 134, 138);
+}    
+
+#g2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+}
+
+    @keyframes slide_animation {
+        0%{
+            transform: translateX(0%);
+        }
+
+        25%{
+            transform: translateX(-100%);
+        }
+        
+        50%{
+            transform: translateX(-200%);
+        }
+        
+        75%{
+            transform: translateX(-100%);
+        }    
+
+        100%{
+            transform: translateX(0%);
+        }    
+    }
+}
